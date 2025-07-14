@@ -1,15 +1,27 @@
-﻿using intro_oop.inheritance;
-//using intro_oop.composition;
-
-namespace intro_oop;
+﻿namespace intro_oop;
 
 internal static class Program
 {
     private static void Main()
     {
-        var myMachine = new EspressoMachine();
-        myMachine.BrewCoffee();
-        myMachine.MakeEspresso();
-        myMachine.SteamMilk();
+        var myEBook = new EBook();
+        myEBook.Download();
+        myEBook.Read();
+    }
+}
+
+public class Book
+{
+    public void Read()
+    {
+        Console.WriteLine("Reading...");
+    }
+}
+
+public class EBook : Book
+{
+    public void Download()
+    {
+        Console.WriteLine("Downloading...");
     }
 }
