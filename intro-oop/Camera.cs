@@ -1,6 +1,6 @@
 namespace intro_oop;
 
-internal class Camera 
+internal class Camera //TODO: implement ICamera
 {
     public void Capture()
     {
