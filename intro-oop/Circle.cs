@@ -3,6 +3,7 @@
     public class Circle
     {
         private readonly double _radius;
+        public Location? Location { get; set; } // composition
 
         public Circle(double radius)
         {
