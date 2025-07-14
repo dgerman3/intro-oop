@@ -9,9 +9,10 @@ internal static class Program
         var circle = new Circle(1.0);
         var triangle = new Triangle(1.0, 2.0);
         var dog = new Dog();
+        var square = new Square(1.0);
 
-        var shapes = new Shape[] { circle, triangle };
-        var names = new INameable[] { circle, triangle, dog };
+        var shapes = new Shape[] { circle, triangle, square };
+        var names = new INameable[] { circle, triangle, dog, square };
 
         PrintArea(shapes);
         PrintName(names);

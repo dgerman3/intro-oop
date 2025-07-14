@@ -4,7 +4,7 @@ public abstract class Shape : INameable
 {
     public abstract double Area();
     public Location? Location { get; set; }
-    public string GetName() // note: no override keyword
+    public string GetName()
     {
         return GetType().Name;
     }
