@@ -1,24 +1,20 @@
-﻿namespace intro_oop;
+﻿using intro_oop;
 
 internal class Program
 {
-    public static void Main()
+    static void Main(string[] args)
     {
-        var circle = new Circle(1.0);
-        // var triangle = new Triangle(1.0, 2.0);
-        // var dog = new Dog();
-        // var square = new Square(1.0);
-        var location1 = new LocationJavaStyle();
-        location1.SetX(0);
-        location1.SetY(0);
+        Console.WriteLine("Hello, World!");
 
-        var location2 = new LocationManualProps();
-        location2.X = 0;
-        location2.Y = 0;
+        Console.WriteLine(new Circle(1.0).Area());
 
-        var location3 = new LocationManualProps {X = 0, Y = 0};
+        var location1 = new Location { X = 1.0, Y = 2.0 };
+        var location2 = new Location { X = 1.0, Y = 2.0 };
 
+        var areEqual = location1 == location2;
 
-        Console.WriteLine(circle.Area());
+        Console.WriteLine(areEqual);
     }
 }
+
+
