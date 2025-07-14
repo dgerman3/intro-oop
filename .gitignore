@@ -1,3 +1,4 @@
+
 # Created by https://www.toptal.com/developers/gitignore/api/jetbrains+all,visualstudio
 # Edit at https://www.toptal.com/developers/gitignore?templates=jetbrains+all,visualstudio
 
@@ -486,12 +487,6 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
-
-# JetBrains Rider (and other JetBrains IDEs) user and project files
-*.sln.DotSettings.user
-*.DotSettings
-*.iml
-*.ipr
 
 ### VisualStudio Patch ###
 # Additional files built by Visual Studio
