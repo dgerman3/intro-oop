@@ -1,6 +1,6 @@
 namespace intro_oop;
 
-class Engine
+class Engine : IEngine
 {
     public void Run()
     {

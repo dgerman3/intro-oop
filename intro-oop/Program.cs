@@ -4,7 +4,7 @@ internal static class Program
 {
     private static void Main()
     {
-        var myEngine = new Engine();
+        IEngine myEngine = new Engine();
         var myCar = new Car(myEngine);
         myCar.Start();
     }

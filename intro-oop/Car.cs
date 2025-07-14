@@ -2,9 +2,9 @@ namespace intro_oop;
 
 internal class Car
 {
-    private readonly Engine _engine; // Composition without polymorphism (Legos with glue)
+    private readonly IEngine _engine; // Composition with polymorphism (Legos)
 
-    public Car(Engine engine) // Constructor injection
+    public Car(IEngine engine) // Constructor injection
     {
         _engine = engine;
     }
