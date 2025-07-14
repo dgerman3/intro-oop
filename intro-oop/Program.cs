@@ -1,8 +1,5 @@
-﻿// See https://aka.ms/new-console-template for more information
-
-namespace intro_oop;
-
-internal static class Program
+﻿using intro_oop;
+internal class Program
 {
     private static void Main(string[] args)
     {
