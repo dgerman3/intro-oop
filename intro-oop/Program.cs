@@ -6,7 +6,9 @@ internal static class Program
     {
         IEngine engine = new Engine();
         IEngine safetyEngine = new SafetyCheckEngineDecorator(engine);
-        Car myCar = new Car(safetyEngine);
+        IEngine performanceEngine = new PerformanceTuningEngineDecorator(safetyEngine);
+        
+        Car myCar = new Car(performanceEngine);
         myCar.Start();
     }
 }
