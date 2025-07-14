@@ -2,12 +2,10 @@ namespace intro_oop;
 
 internal class Smartphone
 {
-    // TODO: Use interfaces instead of concrete classes.
-    private readonly Camera _camera;
-    private readonly Battery _battery;
+    private readonly ICamera _camera;
+    private readonly IBattery _battery;
 
-    // TODO: Use interfaces instead of concrete classes.
-    public Smartphone(Camera camera, Battery battery)
+    public Smartphone(ICamera camera, IBattery battery)
     {
         _camera = camera;
         _battery = battery;
