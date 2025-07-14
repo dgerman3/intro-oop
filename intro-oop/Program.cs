@@ -4,10 +4,11 @@ internal static class Program
 {
     private static void Main()
     {
-        ICamera camera = new Camera();
-        IBattery battery = new Battery();
+        //TODO: Uncomment the following lines and inject the dependencies
+        // Camera camera = new Camera();
+        // Battery battery = new Battery();
 
-        var phone = new Smartphone(camera, battery);
+        var phone = new Smartphone(/*camera, battery*/);
         phone.TakePhoto();
         phone.Charge();
     }

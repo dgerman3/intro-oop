@@ -2,13 +2,14 @@ namespace intro_oop;
 
 internal class Smartphone
 {
-    private readonly ICamera _camera;
-    private readonly IBattery _battery;
+    // TODO: remove instantiation of Camera and Battery
+    private readonly Camera _camera = new();
+    private readonly Battery _battery = new();
 
-    public Smartphone(ICamera camera, IBattery battery)
+    // TODO: inject dependencies here
+    public Smartphone(/*Camera camera, Battery battery*/)
     {
-        _camera = camera;
-        _battery = battery;
+        
     }
 
     public void TakePhoto()
