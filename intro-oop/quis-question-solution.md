@@ -1,4 +1,5 @@
-﻿namespace intro_oop;
+```csharp
+namespace intro_oop;
 
 internal static class Program
 {
@@ -25,3 +26,4 @@ public class LoggingNotifierDecorator : INotifier
         Console.WriteLine($"Log: Notification has been sent to user: {userId}");
     }
 }
+```
