@@ -1,12 +1,14 @@
 namespace intro_oop;
 
-internal class OverchargeProtectionDecorator // TODO: Make it implement IBattery
+internal class OverchargeProtectionDecorator : IBattery
 {
-    // TODO: Add a field for the decorated battery and initialize it in the constructor
-
+    private readonly IBattery _decoratedBattery;
     private int _chargeLevel = 0;
 
-    // TODO: Implement the constructor to accept an IBattery object
+    public OverchargeProtectionDecorator(IBattery decoratedBattery)
+    {
+        _decoratedBattery = decoratedBattery;
+    }
 
     public void ChargeUp()
     {
@@ -15,9 +17,7 @@ internal class OverchargeProtectionDecorator // TODO: Make it implement IBattery
             Console.WriteLine("Overcharge protection activated. Stopping charge.");
             return;
         }
-
-        // TODO: Call the decorated battery's ChargeUp method
-
-        _chargeLevel += 10;
+        _decoratedBattery.ChargeUp();
+        _chargeLevel += 10;  // Simulating charge level increase
     }
 }
