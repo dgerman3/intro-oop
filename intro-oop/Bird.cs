@@ -5,7 +5,7 @@ namespace intro_oop;
 // No: It simply represents the basic behaviors of a bird, hence it is following a single responsibility of showcasing a bird's general actions.
 public class Bird
 {
-    public virtual void Move()
+    public virtual void Fly()
     {
         Console.WriteLine("This bird is flying.");
     }
