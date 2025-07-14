@@ -1,6 +1,6 @@
 ﻿namespace intro_oop;
 
-public class Location
+public record Location
 {
     public double X { get; init; }
 
