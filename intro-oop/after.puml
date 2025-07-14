@@ -1,25 +1,33 @@
 @startuml
 hide empty members
 
-interface ITrackPlayer {
-    +void PlayTrack(string trackId)
+note as n1
+    The <b><color:red>Source Code Dependency</color> 
+    is in the <b>opposite (inverted))</b> direction
+    of the <b><color:green>Flow of Control</color>
+end note
+
+class NotificationService {
+    - INotifier _notifier
+    + void NotifyUser(string userId)
 }
 
-interface IPlaylistCreator {
-    +void CreatePlaylist(string playlistName)
+interface INotifier {
+    + void Notify(string userId)
 }
 
-class BasicMusicPlayer {
-   
+class EmailNotifier {
+    + void Notify(string userId)
 }
+NotificationService ..[#green,plain,thickness=3]right-> EmailNotifier : Flow of Control
 
-class AdvancedMusicPlayer {
-   
-}
+NotificationService -[hidden]right- INotifier : length =============
+NotificationService -[#red]-> INotifier : Source Code Dependency
 
-BasicMusicPlayer ..up|> ITrackPlayer
-AdvancedMusicPlayer ..up|> ITrackPlayer
-AdvancedMusicPlayer ..up|> IPlaylistCreator
+
+EmailNotifier -[hidden]right- INotifier : length ==============
+EmailNotifier ..[#red,plain,thickness=3]left|> INotifier : Source Code Dependency
+
 
 
 

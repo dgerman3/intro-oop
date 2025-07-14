@@ -1,21 +1,24 @@
 @startuml
 hide empty members
-interface IMusicApp {
-    +void PlayTrack(string trackId)
-    +void CreatePlaylist(string playlistName)
+
+note as n1
+    The <b><color:red>Source Code Dependency</color> 
+    is in the <b>same</b> direction
+    of the <b><color:green>Flow of Control</color>
+end note
+class NotificationService {
+    - EmailNotifier _emailNotifier
+    + void NotifyUser(string userId)
 }
 
-class BasicMusicPlayer {
-   
+class EmailNotifier {
+    + void SendEmail(string userId)
 }
 
-class AdvancedMusicPlayer {
-   
-}
+NotificationService -[#green,plain,thickness=3]right--> EmailNotifier : Flow of Control
+NotificationService -[#red,plain,thickness=3]right--> EmailNotifier : Source Code Dependency
 
-BasicMusicPlayer ..up|> IMusicApp
-AdvancedMusicPlayer ..up|> IMusicApp
 
-note bottom of BasicMusicPlayer : BasicMusicPlayer does not support creating playlists
+
 
 @enduml
